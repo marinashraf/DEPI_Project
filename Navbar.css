@@ -1,0 +1,196 @@
+/* 🌙 الوضع الداكن */
+body.dark-mode {
+  background-color: #0d0d0d;
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* ☀️ الوضع الفاتح */
+body.light-mode {
+  background-color: #fdfdfd;
+  color: #222;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* الشريط العلوي */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+  background-color: #000000;
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* الجهة اليسرى */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* اللوجو */
+.logo {
+  height: 55px;
+  width: auto;
+  object-fit: contain;
+  transition: filter 0.3s;
+}
+
+/* اللوجو ثابت اللون */
+body.light-mode .logo,
+body.dark-mode .logo {
+  filter: none;
+}
+
+/* زر Browse Category */
+.browse-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.browse-btn {
+  background-color: #d4af37;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+}
+.browse-btn:hover {
+  background-color: #f1cc4b;
+  transform: scale(1.05);
+}
+
+/* قائمة Dropdown */
+.category-menu {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  background-color: #fff; /* الوضع الفاتح */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  list-style: none;
+  padding: 10px 0;
+  width: 208px;
+  z-index: 1000;
+  color: #000; /* نص أسود */
+}
+
+.category-menu li {
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.category-menu li:hover {
+  background-color: #f1cc4b; /* hover أصفر */
+  color: #000;
+}
+
+/* Dark Mode */
+body.dark-mode .browse-btn {
+  background-color: #444;
+  color: #ffd700;
+}
+
+body.dark-mode .category-menu {
+  background-color: #333;
+  color: #ffd700;
+  border: 1px solid #555;
+}
+
+body.dark-mode .category-menu li:hover {
+  background-color: #444;
+  color: #ffd700;
+}
+
+/* روابط Navbar */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  font-weight: 500;
+}
+
+.navbar-links li {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.navbar-links li:hover,
+.navbar-links li.active {
+  color: #d4af37;
+}
+
+/* الجهة اليمنى */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.login-btn,
+.register-btn {
+  background: none;
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+}
+.login-btn:hover,
+.register-btn:hover {
+  background-color: #d4af37;
+  color: #000;
+}
+
+/* زر الوضع */
+.mode-toggle {
+  background: none;
+  border: none;
+  color: #d4af37;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.mode-toggle:hover {
+  transform: rotate(20deg);
+}
+
+/* Login popup */
+.login-popup {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  z-index: 1000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+  .browse-btn {
+    font-size: 0.9rem;
+  }
+}
