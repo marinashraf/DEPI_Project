@@ -54,7 +54,7 @@ export default function Tourist() {
             <SwiperSlide key={index}>
               <div 
                 className="city-card"
-                onClick={() => setSelectedCity(city)}
+                 onMouseEnter={() => setSelectedCity(city)}
               >
                 <Link to={city.link}>
   <img src={city.image} alt={city.name} />
@@ -73,3 +73,4 @@ export default function Tourist() {
     </div>
   );
 }
+
