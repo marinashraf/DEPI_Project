@@ -53,7 +53,7 @@ function Navbar() {
   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Home</Link>
 
   <a href="#places-section">Provinces</a>
-          <a href="#contact-section">Contact</a>
+           <Link className="home-Contact" to="/Contact">Contact</Link>
         <li>Language</li>
       </ul>
 
@@ -81,3 +81,4 @@ function Navbar() {
 }
 
 export default Navbar;
+
