@@ -228,7 +228,7 @@ export default function Giza() {
           <div className="section-icon-circle">
             <i className="fas fa-film"></i>
           </div>
-          <h2 className="section-title">Video about Luxor</h2>
+          <h2 className="section-title">Video about Giza</h2>
           <motion.div
             className="video-container"
             whileInView={{ scale: 1 }}
@@ -372,4 +372,5 @@ export default function Giza() {
     </>
   );
 }
+
 
